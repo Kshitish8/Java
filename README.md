@@ -23,19 +23,24 @@ Use it in VS Code like this:
 ## Current Example
 
 ```java
-public class Main {
+import java.util.Scanner;
 
-    public static void main(String[] args) {
-        double random = Math.random();
-        System.out.println(random * 100);
-    }
+public class Main{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your name: ");
+    String name = scanner.nextLine();
+    System.out.println("Hello " + name);
+  }
 }
 ```
 
 This program demonstrates:
 
-- Using `Math.random()` to generate a random `double` between 0.0 (inclusive) and 1.0 (exclusive).
-- Scaling the random value by multiplying it by 100 to get a result in the range [0, 100).
+- Reading input from the user with `Scanner`.
+- Using `nextLine()` to capture a full line of text.
+- Printing a greeting that includes the entered name.
 
 ## All Tasks (session history)
 
@@ -56,6 +61,7 @@ If you want these tasks split into separate example files or organized under an 
 ## Recent Main.java Tasks
 
 - Implemented several short demos in `src/Main.java` during this session, most recently:
+  - **Scanner input**: Read a name from the console and printed a greeting.
   - **Math.random**: Generated a random `double` and scaled it to a usable range.
   - **Math class methods**: Used `Math.max`, `Math.min`, `Math.round`, `Math.floor`, `Math.ceil`, and `Math.sqrt`.
   - **Random integer generation**: Scaled `Math.random()` to generate random integers in a specific range with the formula `(int)(Math.random() * (max - min + 1)) + min`.

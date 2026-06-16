@@ -23,24 +23,24 @@ Use it in VS Code like this:
 ## Current Example
 
 ```java
-import java.util.Scanner;
+import oops.Rectangle;
 
-public class Main{
-  public static void main(String[] args)
-  {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter your name: ");
-    String name = scanner.nextLine();
-    System.out.println("Hello " + name);
+public class Main
+{
+  public static void main(String[] args) {
+  Rectangle rect  = new Rectangle(3,4 );
+    rect.Draw();
+    rect.Area();
   }
 }
 ```
 
 This program demonstrates:
 
-- Reading input from the user with `Scanner`.
-- Using `nextLine()` to capture a full line of text.
-- Printing a greeting that includes the entered name.
+- Importing a class from a package with `import oops.Rectangle;`.
+- Creating a `Rectangle` object using a constructor with `length` and `breadth`.
+- Calling methods on an object (`Draw()` and `Area()`).
+- Using the `oops` package structure for OOP examples.
 
 ## All Tasks (session history)
 
@@ -61,6 +61,9 @@ If you want these tasks split into separate example files or organized under an 
 ## Recent Main.java Tasks
 
 - Implemented several short demos in `src/Main.java` during this session, most recently:
+  - **OOP package + Rectangle**: Created `src/oops/Rectangle.java` with `package oops;`, a constructor, and methods to draw a rectangle and calculate its area.
+  - **Package import in Main**: Updated `src/Main.java` to import `oops.Rectangle`, create a `Rectangle` object, and call `Draw()` and `Area()`.
+  - **Boolean negation**: Declared a `boolean isPassed = false;` and printed `!isPassed` to show logical NOT.
   - **Scanner input**: Read a name from the console and printed a greeting.
   - **Newton_Second_Law fix**: Corrected `src/Newton_Second_Law.java` by renaming the class to match the file (`Newton_Second_Law`), declaring input variables (`double u, v, t, a`), and closing the `Scanner`. Calculated displacement with `u * t + 0.5 * a * t * t` and verified compilation.
   - **Math.random**: Generated a random `double` and scaled it to a usable range.

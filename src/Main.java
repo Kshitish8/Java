@@ -8,6 +8,10 @@ public class Main {
         System.out.println(Math.min(a, b));
         float percentage = 99.99F;
         System.out.println(Math.round(percentage));
+        System.out.println(Math.floor(percentage));
+        System.out.println(Math.ceil(percentage));
+        int num = 169;
+        System.out.println(Math.sqrt(num));
 
     }
 }

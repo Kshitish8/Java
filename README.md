@@ -26,21 +26,16 @@ Use it in VS Code like this:
 public class Main {
 
     public static void main(String[] args) {
-        int a = 2;
-        int b = 0;
-        System.out.println(a + b);
-        System.out.println(b - a);
-        System.out.println(a * b);
-        System.out.println(a / b);
-
+        double random = Math.random();
+        System.out.println(random * 100);
     }
 }
 ```
 
 This program demonstrates:
 
-- Basic integer arithmetic (`+`, `-`, `*`, `/`).
-- Beware: dividing by zero (`a / b` when `b == 0`) throws `ArithmeticException` at runtime — the program will crash on that line.
+- Using `Math.random()` to generate a random `double` between 0.0 (inclusive) and 1.0 (exclusive).
+- Scaling the random value by multiplying it by 100 to get a result in the range [0, 100).
 
 ## All Tasks (session history)
 
@@ -61,8 +56,9 @@ If you want these tasks split into separate example files or organized under an 
 ## Recent Main.java Tasks
 
 - Implemented several short demos in `src/Main.java` during this session, most recently:
-  - Used the `Math` class: `Math.max`, `Math.min`, `Math.round`, `Math.floor`, `Math.ceil`, and `Math.sqrt`.
-  - Demonstrated rounding and basic numeric operations on `float` and `int` values.
-  - Previously explored: object reference vs copy (`Point`), `String.charAt()`, array creation/sorting and printing with `Arrays.toString()`, and basic arithmetic (including divide-by-zero behavior).
+  - **Math.random**: Generated a random `double` and scaled it to a usable range.
+  - **Math class methods**: Used `Math.max`, `Math.min`, `Math.round`, `Math.floor`, `Math.ceil`, and `Math.sqrt`.
+  - **Random integer generation**: Scaled `Math.random()` to generate random integers in a specific range with the formula `(int)(Math.random() * (max - min + 1)) + min`.
+  - Previously explored: object reference vs copy (`Point`), `String.charAt()`, array creation/sorting and printing with `Arrays.toString()`, basic arithmetic (including divide-by-zero), and other `Math` class operations.
 
 These examples were compiled and run locally to verify behavior.

@@ -62,6 +62,7 @@ If you want these tasks split into separate example files or organized under an 
 
 - Implemented several short demos in `src/Main.java` during this session, most recently:
   - **Scanner input**: Read a name from the console and printed a greeting.
+  - **Newton_Second_Law fix**: Corrected `src/Newton_Second_Law.java` by renaming the class to match the file (`Newton_Second_Law`), declaring input variables (`double u, v, t, a`), and closing the `Scanner`. Calculated displacement with `u * t + 0.5 * a * t * t` and verified compilation.
   - **Math.random**: Generated a random `double` and scaled it to a usable range.
   - **Math class methods**: Used `Math.max`, `Math.min`, `Math.round`, `Math.floor`, `Math.ceil`, and `Math.sqrt`.
   - **Random integer generation**: Scaled `Math.random()` to generate random integers in a specific range with the formula `(int)(Math.random() * (max - min + 1)) + min`.

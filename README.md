@@ -57,3 +57,12 @@ This program demonstrates:
 - **README synchronization**: Updated this `README.md` multiple times to reflect the current `src/Main.java` contents and learning notes.
 
 If you want these tasks split into separate example files or organized under an `examples/` folder, I can do that next.
+
+## Recent Main.java Tasks
+
+- Implemented several short demos in `src/Main.java` during this session, most recently:
+  - Used the `Math` class: `Math.max`, `Math.min`, `Math.round`, `Math.floor`, `Math.ceil`, and `Math.sqrt`.
+  - Demonstrated rounding and basic numeric operations on `float` and `int` values.
+  - Previously explored: object reference vs copy (`Point`), `String.charAt()`, array creation/sorting and printing with `Arrays.toString()`, and basic arithmetic (including divide-by-zero behavior).
+
+These examples were compiled and run locally to verify behavior.

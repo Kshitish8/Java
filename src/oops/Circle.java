@@ -1,6 +1,6 @@
 package oops;
 
-public class Circle {
+public class Circle extends Shape {
 
     private static int radius;
 
@@ -8,11 +8,14 @@ public class Circle {
         Circle.radius = radius;
     }
 
-    public static void Draw() {
-        System.out.println("Drawing a circle");
-    }
+    /*
+     * public void Draw() {
+     * System.out.println("Drawing a circle");
+     * }
+     */
 
-    public static void Area() {
+    @Override
+    public void Area() {
         int area = (int) (Math.PI * radius * radius);
         System.out.println("Area of circle is: " + area);
     }

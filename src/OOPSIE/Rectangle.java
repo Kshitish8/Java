@@ -1,6 +1,6 @@
 package OOPSIE;
 
-public class Rectangle extends Shape {
+public class Rectangle implements Shape {
 
     public int length;
     public int breadth;

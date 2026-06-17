@@ -1,6 +1,6 @@
 package OOPSIE;
 
-public class Circle extends Shape {
+public class Circle implements Shape {
 
     private static int radius;
 

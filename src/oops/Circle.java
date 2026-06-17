@@ -8,11 +8,10 @@ public class Circle extends Shape {
         Circle.radius = radius;
     }
 
-    /*
-     * public void Draw() {
-     * System.out.println("Drawing a circle");
-     * }
-     */
+    @Override
+    public void Draw() {
+        System.out.println("Drawing a circle");
+    }
 
     @Override
     public void Area() {

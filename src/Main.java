@@ -1,16 +1,15 @@
-import OOPSIE.Circle;
-import OOPSIE.Rectangle;
-import java.awt.Shape;
-
 public class Main {
-
     public static void main(String[] args) {
-        Shape shape0= new Circle(8);
-        Shape.Draw();
-        Shape.Area();
-
-        Shape shape1 = new Rectangle(4)(5);
-        Shape.Draw();
-        Shape.Area();
+        System.out.println("Sum is " + add(5, 6));
+        System.out.println("Sum is " + add(3, 4, 5));
     }
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
 }

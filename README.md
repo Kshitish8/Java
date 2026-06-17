@@ -1,6 +1,6 @@
 # Learning Java
 
-Here in this repo, i will be keeping a track of things, that i have learned in Java.
+Here in this repo, I will be keeping track of the things that I have learned in Java.
 
 ## Setup
 
@@ -13,12 +13,19 @@ Use it in VS Code like this:
 3. Put source files in `src`.
 4. Run or debug `src/Main.java`, or use the `Build Java` task.
 
+---
+
 ## Topics Learned
 
 - **Object References vs Copies**: Java passes object references by default; use constructors to create independent copies.
 - **String Operations**: Methods like `charAt()` for accessing individual characters in strings.
 - **Java Syntax**: No named arguments in constructors (use positional arguments instead).
 - **Arrays**: Creating and working with arrays, printing them with `Arrays.toString()`.
+- **Inheritance**: Creating subclasses using the `extends` keyword.
+- **Method Overriding**: Allowing subclasses to provide their own implementation of inherited methods.
+- **Polymorphism**: Using a parent class reference to refer to child class objects.
+
+---
 
 ## Current Example
 
@@ -27,74 +34,148 @@ import oops.Rectangle;
 
 public class Main
 {
-  public static void main(String[] args) {
-  Rectangle rect  = new Rectangle(3,4 );
-    rect.Draw();
-    rect.Area();
-  }
+    public static void main(String[] args) {
+        Rectangle rect = new Rectangle(3, 4);
+        rect.Draw();
+        rect.Area();
+    }
 }
 ```
 
 This program demonstrates:
 
-- Importing a class from a package with `import oops.Rectangle;`.
-- Creating a `Rectangle` object using a constructor with `length` and `breadth`.
-- Calling methods on an object (`Draw()` and `Area()`).
+- Importing a class from a package using `import oops.Rectangle;`
+- Creating a `Rectangle` object using its constructor.
+- Calling object methods (`Draw()` and `Area()`).
 - Using the `oops` package structure for OOP examples.
 
-## All Tasks (session history)
+---
+
+## All Tasks (Session History)
 
 - **JDK verification**: Confirmed JDK `26.0.1` is installed and on `PATH`.
-- **VS Code scaffolding**: Added workspace files in `.vscode/` (`settings.json`, `tasks.json`, `launch.json`) and a `bin` output folder to enable build/run from the editor.
-- **Code edits to `src/Main.java`**: Iteratively updated the file to demonstrate several small examples:
-  - Fixed invalid named-argument syntax and used positional constructor arguments instead.
+- **VS Code setup**: Added workspace files in `.vscode/` (`settings.json`, `tasks.json`, `launch.json`) and configured the `bin` output folder.
+- **Code updates**:
+  - Fixed invalid named-argument syntax.
+  - Used positional constructor arguments.
+  - Added inheritance examples.
+  - Added method overriding examples.
+  - Added polymorphism examples.
 
-## OOPS (Object-Oriented Programming) Implementation
+---
 
-### Overview
+# OOPS (Object-Oriented Programming)
 
-Implemented inheritance-based shape hierarchy with a base `Shape` class and two subclasses: `Circle` and `Rectangle`. Both subclasses override the `Draw()` and `Area()` methods.
+## Overview
 
-### Classes Created
+Implemented an inheritance-based shape hierarchy with a base `Shape` class and two subclasses: `Circle` and `Rectangle`.
 
-#### Shape.java (Base Class)
+Both subclasses override the `Draw()` and `Area()` methods to provide their own implementation.
 
-- Provides abstract methods: `Draw()` and `Area()`
-- Serves as the parent class for all shapes
+---
 
-#### Circle.java (Subclass)
+## Classes Created
+
+### Shape.java (Base Class)
+
+- Parent class for all shapes.
+- Provides default implementations of:
+  - `Draw()`
+  - `Area()`
+
+---
+
+### Circle.java
 
 - Extends `Shape`
-- Properties: `radius` (static field)
-- Overrides `Draw()`: Prints "Drawing a circle"
-- Overrides `Area()`: Calculates and prints the area using π * r²
+- Property:
+  - `radius`
+- Overrides:
+  - `Draw()`
+  - `Area()`
+- Calculates area using:
 
-#### Rectangle.java (Subclass)
+```
+π × r²
+```
+
+---
+
+### Rectangle.java
 
 - Extends `Shape`
-- Properties: `length` and `breadth` (instance fields)
-- Constructor: Initializes length and breadth
-- Overrides `Draw()`: Prints "Drawing a rectangle"
-- Overrides `Area()`: Calculates and prints the area as length × breadth
-- Static initializer block: Prints initialization message
+- Properties:
+  - `length`
+  - `breadth`
+- Constructor initializes both values.
+- Overrides:
+  - `Draw()`
+  - `Area()`
+- Calculates area using:
 
-#### Main.java
+```
+length × breadth
+```
 
-- Demonstrates polymorphism by creating instances of both `Rectangle` and `Circle`
-- Uses the `Shape` interface to work with objects of different types
-- Creates `Rectangle(3, 4)` → Area: 12
-- Creates `Circle(5)` → Area: 78 (approximately)
+- Includes a static initializer block.
 
-### Issues Fixed
+---
 
-1. **Class Declaration Errors**: Fixed malformed class declarations that were missing class names
-2. **Method Visibility**: Converted static methods to instance methods for proper inheritance
-3. **Import Issues**: Corrected imports to use custom `oops.Shape` instead of `java.awt.Shape`
-4. **Static Method Calls**: Changed from calling methods on the class to calling them on instances
+## Polymorphism Example
 
-### Key Concepts Demonstrated
+One of the latest additions to this repository is a **runtime polymorphism** example.
 
-- **Inheritance**: Using `extends` to inherit from a parent class
-- **Method Overriding**: Subclasses override parent methods with their own implementations
-- **Polymorphism**: Working with objects through their parent class type
-- **Package Organization**: Using the `oops` package to organize OOP-related classes
+Example:
+
+```java
+Shape s1 = new Rectangle(3, 4);
+Shape s2 = new Circle(5);
+
+s1.Draw();
+s1.Area();
+
+s2.Draw();
+s2.Area();
+```
+
+### What this demonstrates
+
+- A parent class (`Shape`) reference can point to different child class objects.
+- The method that gets executed depends on the **actual object**, not the reference type.
+- Java decides which overridden method to call at **runtime** (Dynamic Method Dispatch).
+
+Output will be similar to:
+
+```
+Drawing a rectangle
+Area = 12
+
+Drawing a circle
+Area = 78.5
+```
+
+This is one of the core concepts of Object-Oriented Programming and makes Java code more flexible and extensible.
+
+---
+
+## Issues Fixed
+
+1. Fixed malformed class declarations.
+2. Converted static methods to instance methods for proper inheritance.
+3. Corrected imports to use the custom `oops.Shape`.
+4. Changed method calls from class methods to object methods.
+5. Added runtime polymorphism using parent class references.
+
+---
+
+## Key Concepts Demonstrated
+
+- Object Creation
+- Constructors
+- Packages
+- Classes & Objects
+- Inheritance (`extends`)
+- Method Overriding
+- Runtime Polymorphism
+- Dynamic Method Dispatch
+- Package Organization

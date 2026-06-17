@@ -1,6 +1,5 @@
-import oops.Circle;
-import oops.Rectangle;
-import oops.Shape;
+import OOPSIE.Circle;
+import OOPSIE.Rectangle;
 
 public class Main {
 
@@ -9,8 +8,8 @@ public class Main {
         rect.Draw();
         rect.Area();
 
-        Shape shape = new Circle(5);
-        shape.Draw();
-        shape.Area();
+        Circle circle = new Circle(5);
+        circle.Draw();
+        circle.Area();
     }
 }

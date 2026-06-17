@@ -1,7 +1,6 @@
-package oops;
+package OOPSIE;
 
-public class Rectangle extends Shape
-{
+public class Rectangle extends Shape {
 
     public int length;
     public int breadth;
@@ -15,10 +14,12 @@ public class Rectangle extends Shape
         System.out.println("I am in side the constructor");
     }
 
+    @Override
     public void Draw() {
         System.out.println("Drawing a rectangle");
     }
 
+    @Override
     public void Area() {
         int area = length * breadth;
         System.out.println("Area of rectangle is: " + area);

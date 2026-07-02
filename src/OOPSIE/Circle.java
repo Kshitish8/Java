@@ -2,10 +2,12 @@ package OOPSIE;
 
 public class Circle implements Shape {
 
-    private static int radius;
+    // 1. REMOVED 'static'. Now each circle object gets its own radius.
+    private int radius; 
 
     public Circle(int radius) {
-        Circle.radius = radius;
+        // 2. Changed 'Circle.radius' to 'this.radius' to correctly refer to the instance variable
+        this.radius = radius; 
     }
 
     @Override
